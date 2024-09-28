@@ -17,14 +17,28 @@
 
 // Constructors
 
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-}
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
 
-Person.prototype.talk = function () {
-  console.log(`Hi, My Name is ${this.name}, and my age is ${this.age}`);
-};
+// Person.prototype.talk = function () {
+//   console.log(`Hi, My Name is ${this.name}, and my age is ${this.age}`);
+// };
+
+// let p1 = new Person("Athiii", 24);
+// let p2 = new Person("Pandu", 25);
+
+// Using Classes - it always has a constructor inside it
+
+class Person {
+  constructor(name, age) {
+    (this.name = name), (this.age = age);
+  }
+  talk() {
+    console.log(`Hi, my Name is ${this.name}, and my age is ${this.age}`);
+  }
+}
 
 let p1 = new Person("Athiii", 24);
 let p2 = new Person("Pandu", 25);
